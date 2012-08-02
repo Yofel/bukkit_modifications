@@ -1,3 +1,9 @@
 name: Various Bukkit Modifications
 main: com.github.yofel.bukkit_modifications.Mods
 version: 0.1
+commands:
+    mcspeed:
+        description: set the Minecart speed for new minecarts
+        usage: /mcspeed [speed]
+        permission: bukkit_modifications.mcspeed
+        permission-message: You have insufficient permissions for bukkit_modifications.mcspeed

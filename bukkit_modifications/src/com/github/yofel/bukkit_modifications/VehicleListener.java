@@ -11,11 +11,21 @@ public class VehicleListener implements Listener {
     
     Logger log = Logger.getLogger("Minecraft");
     
+    private double speedMultiplier = 4;
+    
+    public double getSpeedMultiplier() {
+        return speedMultiplier;
+    }
+
+    public void setSpeedMultiplier(double speedMultiplier) {
+        this.speedMultiplier = speedMultiplier;
+    }
+
     @EventHandler
     public void onVehicleCreation(VehicleCreateEvent e) {
         if (e.getVehicle() instanceof Minecart) {
             Minecart m = (Minecart) e.getVehicle();
-            m.setMaxSpeed(0.8D);
+            m.setMaxSpeed(0.4 * speedMultiplier);
             log.info("Mincart placed");
         }
 
