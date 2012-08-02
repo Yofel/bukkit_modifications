@@ -1,7 +1,6 @@
 package com.github.yofel.bukkit_modifications;
 
 import org.bukkit.plugin.java.JavaPlugin;
-import org.bukkit.entity.Minecart;
 
 public class Mods extends JavaPlugin {
     @Override
