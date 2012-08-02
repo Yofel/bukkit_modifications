@@ -2,7 +2,6 @@ package com.github.yofel.bukkit_modifications;
 
 import java.util.logging.Logger;
 
-import org.bukkit.entity.EntityType;
 import org.bukkit.entity.Minecart;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
@@ -14,7 +13,7 @@ public class VehicleListener implements Listener {
     
     @EventHandler
     public void onVehicleCreation(VehicleCreateEvent e) {
-        if (e.getVehicle().getType() == EntityType.MINECART) {
+        if (e.getVehicle() instanceof Minecart) {
             Minecart m = (Minecart) e.getVehicle();
             m.setMaxSpeed(0.8D);
             log.info("Mincart placed");
