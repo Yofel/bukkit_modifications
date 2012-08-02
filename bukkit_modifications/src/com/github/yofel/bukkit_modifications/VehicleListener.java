@@ -26,7 +26,9 @@ public class VehicleListener implements Listener {
         if (e.getVehicle() instanceof Minecart) {
             Minecart m = (Minecart) e.getVehicle();
             m.setMaxSpeed(0.4 * speedMultiplier);
-            log.info("Mincart placed");
+            
+            // debug
+            // log.info("Mincart placed");
         }
 
     }
