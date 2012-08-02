@@ -30,6 +30,7 @@ public class Mods extends JavaPlugin {
                 try
                 {
                     v.setSpeedMultiplier(Double.parseDouble(args[0]));
+                    sender.sendMessage("Set speed multiplier to " + v.getSpeedMultiplier());
                 }
                 catch (NumberFormatException e)
                 {
