@@ -23,6 +23,7 @@ public class Mods extends JavaPlugin {
     public boolean onCommand(CommandSender sender, Command cmd,
             String commandLabel, String[] args) {
         
+        // FIXME: something's broken with the command permissions I think
         if (cmd.getName().equalsIgnoreCase("mcspeed")) {
             
             if (args.length > 0)
