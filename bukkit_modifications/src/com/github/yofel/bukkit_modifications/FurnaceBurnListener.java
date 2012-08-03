@@ -2,13 +2,11 @@ package com.github.yofel.bukkit_modifications;
 
 import java.util.logging.Logger;
 
-import org.bukkit.Location;
 import org.bukkit.Material;
 import org.bukkit.block.Furnace;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.inventory.FurnaceBurnEvent;
-import org.bukkit.inventory.ItemStack;
 
 public class FurnaceBurnListener implements Listener {
     
