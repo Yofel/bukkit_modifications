@@ -7,11 +7,13 @@ import org.bukkit.plugin.java.JavaPlugin;
 public class Mods extends JavaPlugin {
     
     private final VehicleListener v = new VehicleListener();
+    private final FurnaceBurnListener f = new FurnaceBurnListener();
     
     @Override
     public void onEnable() {
         getLogger().info("bukkit_mods 0.1 enabled");
         getServer().getPluginManager().registerEvents(v, this);
+        getServer().getPluginManager().registerEvents(f, this);
     }
 
     @Override
