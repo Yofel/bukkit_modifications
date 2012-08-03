@@ -72,6 +72,16 @@ public class FurnaceBurnListener implements Listener {
                 furnaceBlock.setBurnTime((short) 1600);
             }
             
+            if (event.getFuel().getType() == Material.PAPER) {
+                furnaceBlock.setBurnTime((short) 100);
+            }
+            
+            if (event.getFuel().getType() == Material.BOOK ||
+                    event.getFuel().getType() == Material.BOOK_AND_QUILL ||
+                    event.getFuel().getType() == Material.WRITTEN_BOOK) {
+                furnaceBlock.setBurnTime((short) 200);
+            }
+            
         
         } catch (Exception e) {
             // ignore, furnace probably was no furnace anymore.
