@@ -27,12 +27,12 @@ public class FurnaceBurnListener implements Listener {
             // add custom fuels
             if (event.getFuel().getType() == Material.SEEDS ||
                     event.getFuel().getType() == Material.PUMPKIN_SEEDS ||
-                    event.getFuel().getType() == Material.MELON_SEEDS ||
-                    event.getFuel().getType() == Material.COCOA) {
+                    event.getFuel().getType() == Material.MELON_SEEDS) {
                 furnaceBlock.setBurnTime((short) 25);
             }
             
-            if (event.getFuel().getType() == Material.STRING)
+            if (event.getFuel().getType() == Material.STRING ||
+                    event.getFuel().getType() == Material.FEATHER)
             {
                 furnaceBlock.setBurnTime((short) 25);
             }
