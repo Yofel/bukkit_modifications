@@ -37,6 +37,11 @@ public class FurnaceBurnListener implements Listener {
                 furnaceBlock.setBurnTime((short) 25);
             }
             
+            if (event.getFuel().getType() == Material.STRING)
+            {
+                furnaceBlock.setBurnTime((short) 25);
+            }
+            
             if (event.getFuel().getType() == Material.SULPHUR) {
                 // GUNPOWDER
                 furnaceBlock.setBurnTime((short) 200);
