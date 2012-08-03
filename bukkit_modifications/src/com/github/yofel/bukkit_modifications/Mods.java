@@ -11,14 +11,14 @@ public class Mods extends JavaPlugin {
     
     @Override
     public void onEnable() {
-        getLogger().info("bukkit_mods 0.1 enabled");
+        getLogger().info("bukkit_mods enabled");
         getServer().getPluginManager().registerEvents(v, this);
         getServer().getPluginManager().registerEvents(f, this);
     }
 
     @Override
     public void onDisable() {
-        getLogger().info("bukkit_mods 0.1 disabled");
+        getLogger().info("bukkit_mods disabled");
     }
 
     @Override
