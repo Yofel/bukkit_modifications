@@ -15,11 +15,6 @@ public class FurnaceBurnListener implements Listener {
     @EventHandler
     public void onFurnaceBurn(FurnaceBurnEvent event) {
         
-        /*
-        log.info("Furnace activated with " + event.getFuel().toString());
-        
-        log.info("Original Burn time: " + event.getBurnTime());
-        */
         try {
             
             Furnace furnaceBlock = (Furnace) event.getBlock().getState();
@@ -94,5 +89,5 @@ public class FurnaceBurnListener implements Listener {
             // ignore, furnace probably was no furnace anymore.
         }
     }
-
+    
 }
