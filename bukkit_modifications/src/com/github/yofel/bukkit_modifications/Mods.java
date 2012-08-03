@@ -1,7 +1,10 @@
 package com.github.yofel.bukkit_modifications;
 
+import org.bukkit.Material;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
+import org.bukkit.inventory.FurnaceRecipe;
+import org.bukkit.inventory.ItemStack;
 import org.bukkit.plugin.java.JavaPlugin;
 
 public class Mods extends JavaPlugin {
@@ -14,6 +17,8 @@ public class Mods extends JavaPlugin {
         getLogger().info("bukkit_mods enabled");
         getServer().getPluginManager().registerEvents(v, this);
         getServer().getPluginManager().registerEvents(f, this);
+        
+        getServer().addRecipe(new FurnaceRecipe(new ItemStack(Material.LEATHER), Material.ROTTEN_FLESH));
     }
 
     @Override
