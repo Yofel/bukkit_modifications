@@ -39,7 +39,7 @@ public class FurnaceBurnListener implements Listener {
             
             // add custom fuels
             else if (event.getFuel().getType() == Material.SEEDS) {
-                furnaceBlock.setBurnTime((short) 50);
+                furnaceBlock.setBurnTime((short) 25);
                 // FIXME: the burndown is buggy if the burn time is < 200
             }
             
