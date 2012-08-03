@@ -39,15 +39,47 @@ public class FurnaceBurnListener implements Listener {
             
             // add custom fuels
             else if (event.getFuel().getType() == Material.SEEDS) {
-                furnaceBlock.setBurnTime((short) 25);
                 // FIXME: the burndown is buggy if the burn time is < 200
+                furnaceBlock.setBurnTime((short) 25);
             }
             
             else if (event.getFuel().getType() == Material.SULPHUR) {
-                furnaceBlock.setBurnTime((short) 200);
                 // GUNPOWDER
-            
+                furnaceBlock.setBurnTime((short) 200);
             }
+            
+            else if (event.getFuel().getType() == Material.WHEAT) {
+                furnaceBlock.setBurnTime((short) 100);
+            }
+            
+            else if (event.getFuel().getType() == Material.SUGAR_CANE) {
+                furnaceBlock.setBurnTime((short) 100);
+            }
+            
+            else if (event.getFuel().getType() == Material.WOODEN_DOOR) {
+                // make it equal 4 blocks of wood
+                furnaceBlock.setBurnTime((short) 1200);
+            }
+            
+            else if (event.getFuel().getType() == Material.VINE) {
+                furnaceBlock.setBurnTime((short) 100);
+            }
+            
+            else if (event.getFuel().getType() == Material.LEAVES) {
+                furnaceBlock.setBurnTime((short) 50);
+            }
+            
+            else if (event.getFuel().getType() == Material.WOOL) {
+                furnaceBlock.setBurnTime((short) 100);
+            }
+            
+            else if (event.getFuel().getType() == Material.FIREBALL) {
+                // equals one piece of coal
+                // that's too much, but 800 is too low and everything in between
+                // has 64 % x != 0
+                furnaceBlock.setBurnTime((short) 1600);
+            }
+            
         
         } catch (Exception e) {
             // ignore, furnace probably was no furnace anymore.
