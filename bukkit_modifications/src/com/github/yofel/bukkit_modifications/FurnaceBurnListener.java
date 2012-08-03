@@ -48,7 +48,7 @@ public class FurnaceBurnListener implements Listener {
                 furnaceBlock.setBurnTime((short) 100);
             }
             
-            if (event.getFuel().getType() == Material.WOODEN_DOOR) {
+            if (event.getFuel().getType() == Material.WOOD_DOOR) {
                 // make it equal 4 blocks of wood
                 furnaceBlock.setBurnTime((short) 1200);
             }
