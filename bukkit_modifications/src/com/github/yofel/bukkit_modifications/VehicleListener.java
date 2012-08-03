@@ -11,7 +11,7 @@ public class VehicleListener implements Listener {
     
     Logger log = Logger.getLogger("Minecraft");
     
-    private double speedMultiplier = 4;
+    private double speedMultiplier = 1;
     
     public double getSpeedMultiplier() {
         return speedMultiplier;
