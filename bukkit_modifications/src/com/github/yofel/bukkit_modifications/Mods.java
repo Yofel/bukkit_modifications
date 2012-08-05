@@ -19,6 +19,9 @@ public class Mods extends JavaPlugin {
         getServer().getPluginManager().registerEvents(f, this);
         
         getServer().addRecipe(new FurnaceRecipe(new ItemStack(Material.LEATHER), Material.ROTTEN_FLESH));
+        getServer().addRecipe(new FurnaceRecipe(new ItemStack(Material.FLINT), Material.GRAVEL));
+        getServer().addRecipe(new FurnaceRecipe(new ItemStack(Material.SAND), Material.DIRT));
+        
     }
 
     @Override
