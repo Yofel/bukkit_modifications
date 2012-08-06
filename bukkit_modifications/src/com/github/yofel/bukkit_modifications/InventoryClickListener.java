@@ -51,8 +51,8 @@ public class InventoryClickListener implements Listener {
         }
         else {
             // cursor is AIR
-            log.info("Current data: " + e.getCurrentItem().getData());
-            log.info("Current durability: " + e.getCurrentItem().getDurability());
+//            log.info("Current data: " + e.getCurrentItem().getData());
+//            log.info("Current durability: " + e.getCurrentItem().getDurability());
             
             // TODO: look through every slot and try to fill them up
         }
