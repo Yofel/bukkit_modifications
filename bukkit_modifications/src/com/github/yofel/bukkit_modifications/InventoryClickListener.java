@@ -25,7 +25,7 @@ public class InventoryClickListener implements Listener {
                 if (e.getCursor().getType() != Material.AIR
                         && e.getCurrentItem().getType() != Material.AIR
                         && e.getCurrentItem().getData()
-                                .equals(e.getCurrentItem().getData())
+                                .equals(e.getCursor().getData())
                         && e.getCurrentItem().getDurability() == e.getCursor()
                                 .getDurability()) {
 
@@ -114,7 +114,7 @@ public class InventoryClickListener implements Listener {
             }
         }
 
-        return false;
+        return true;
     }
 
 }
