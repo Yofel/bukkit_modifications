@@ -1,6 +1,6 @@
 name: Various Bukkit Modifications
 main: com.github.yofel.bukkit_modifications.Mods
-version: 0.2
+version: 0.3
 commands:
     mcspeed:
         description: set the Minecart speed for new minecarts

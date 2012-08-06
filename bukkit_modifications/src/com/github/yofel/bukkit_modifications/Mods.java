@@ -11,12 +11,14 @@ public class Mods extends JavaPlugin {
     
     private final VehicleListener v = new VehicleListener();
     private final FurnaceBurnListener f = new FurnaceBurnListener();
+    private final InventoryClickListener il = new InventoryClickListener();
     
     @Override
     public void onEnable() {
         getLogger().info("bukkit_mods enabled");
         getServer().getPluginManager().registerEvents(v, this);
         getServer().getPluginManager().registerEvents(f, this);
+        getServer().getPluginManager().registerEvents(il, this);
         
         getServer().addRecipe(new FurnaceRecipe(new ItemStack(Material.LEATHER), Material.ROTTEN_FLESH));
         getServer().addRecipe(new FurnaceRecipe(new ItemStack(Material.FLINT), Material.GRAVEL));
