@@ -17,11 +17,13 @@ public class InventoryClickListener implements Listener {
     @EventHandler
     public boolean onInventoryClick(InventoryClickEvent e) {
 
-        // FIXME: so far it's only handling direct clicks
-        if (e.getCurrentItem().getType() == Material.POTION
-                || e.getCurrentItem().getType() == Material.MUSHROOM_SOUP) {
+        if (e.getCurrentItem() == null || e.getCursor() == null) return false;
+        
+        if (e.getCurrentItem().getType() == Material.POTION) {
+                //|| e.getCurrentItem().getType() == Material.MUSHROOM_SOUP) {
             if (!e.isShiftClick()) {
 
+                // this is the left click behaviour!!!
                 if (e.getCursor().getType() != Material.AIR
                         && e.getCurrentItem().getType() != Material.AIR
                         && e.getCurrentItem().getData()
@@ -29,17 +31,26 @@ public class InventoryClickListener implements Listener {
                         && e.getCurrentItem().getDurability() == e.getCursor()
                                 .getDurability()) {
 
-                    int newAmountInInventory = e.getCurrentItem().getAmount()
-                            + e.getCursor().getAmount();
-                    if (newAmountInInventory > 64)
-                        newAmountInInventory = 64;
+                    int newAmountInInventory = 0;
+                    if (e.isLeftClick()) {
+                        newAmountInInventory = e.getCurrentItem().getAmount()
+                                + e.getCursor().getAmount();
+                    } else {
+                        newAmountInInventory = e.getCurrentItem().getAmount() + 1;
+                    }
+                    if (newAmountInInventory > 64) newAmountInInventory = 64;
 
-                    int newAmountInHand = e.getCursor().getAmount()
-                            - (newAmountInInventory - e.getCurrentItem()
-                                    .getAmount());
+                    int newAmountInHand = 0;
+                    if (e.isLeftClick()) {
+                        newAmountInHand = e.getCursor().getAmount()
+                                - (newAmountInInventory - e.getCurrentItem()
+                                        .getAmount());
+                    } else {
+                        newAmountInHand = e.getCursor().getAmount() - 1;
+                        
+                    }
 
-                    if (newAmountInInventory < 0)
-                        log.warning("amount < 0, this shouldn't happen!");
+                    if (newAmountInHand < 0) log.warning("amount < 0, this shouldn't happen!");
 
                     e.setCurrentItem(new ItemStack(
                             e.getCurrentItem().getType(), newAmountInInventory,
