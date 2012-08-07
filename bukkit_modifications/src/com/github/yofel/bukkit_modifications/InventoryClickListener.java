@@ -13,6 +13,8 @@ import org.bukkit.inventory.ItemStack;
 public class InventoryClickListener implements Listener {
 
     Logger log = Bukkit.getLogger();
+    
+    private int maxPotionStackSize = 8;
 
     @EventHandler
     public boolean onInventoryClick(InventoryClickEvent e) {
@@ -38,7 +40,7 @@ public class InventoryClickListener implements Listener {
                     } else {
                         newAmountInInventory = e.getCurrentItem().getAmount() + 1;
                     }
-                    if (newAmountInInventory > 64) newAmountInInventory = 64;
+                    if (newAmountInInventory > maxPotionStackSize) newAmountInInventory = maxPotionStackSize;
 
                     int newAmountInHand = 0;
                     if (e.isLeftClick()) {
