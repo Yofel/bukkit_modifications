@@ -25,7 +25,6 @@ public class InventoryClickListener implements Listener {
                 //|| e.getCurrentItem().getType() == Material.MUSHROOM_SOUP) {
             if (!e.isShiftClick()) {
 
-                // this is the left click behaviour!!!
                 if (e.getCursor().getType() != Material.AIR
                         && e.getCurrentItem().getType() != Material.AIR
                         && e.getCurrentItem().getData()
