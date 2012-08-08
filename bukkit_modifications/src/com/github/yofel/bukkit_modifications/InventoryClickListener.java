@@ -39,7 +39,13 @@ public class InventoryClickListener implements Listener {
                     } else {
                         newAmountInInventory = e.getCurrentItem().getAmount() + 1;
                     }
-                    if (newAmountInInventory > maxPotionStackSize) newAmountInInventory = maxPotionStackSize;
+                    if (newAmountInInventory > maxPotionStackSize) {
+                        newAmountInInventory = maxPotionStackSize;
+                        if (e.isRightClick()) {
+                            e.setCancelled(true);
+                            return true;
+                        }
+                    }
 
                     int newAmountInHand = 0;
                     if (e.isLeftClick()) {
