@@ -32,7 +32,7 @@ public class InventoryClickListener implements Listener {
                         && e.getCurrentItem().getDurability() == e.getCursor()
                                 .getDurability()) {
 
-                    int newAmountInInventory = 0;
+                    int newAmountInInventory;
                     if (e.isLeftClick()) {
                         newAmountInInventory = e.getCurrentItem().getAmount()
                                 + e.getCursor().getAmount();
@@ -47,7 +47,7 @@ public class InventoryClickListener implements Listener {
                         }
                     }
 
-                    int newAmountInHand = 0;
+                    int newAmountInHand;
                     if (e.isLeftClick()) {
                         newAmountInHand = e.getCursor().getAmount()
                                 - (newAmountInInventory - e.getCurrentItem()
