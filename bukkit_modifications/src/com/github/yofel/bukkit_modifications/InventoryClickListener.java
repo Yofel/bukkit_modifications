@@ -59,10 +59,10 @@ public class InventoryClickListener implements Listener {
 
                     if (newAmountInHand < 0) log.warning("amount < 0, this shouldn't happen!");
 
-                    e.setCurrentItem(new ItemStack(
+                    e.getWhoClicked().setItemOnCursor(new ItemStack(
                             e.getCurrentItem().getType(), newAmountInInventory,
                             e.getCurrentItem().getDurability()));
-                    e.getWhoClicked().setItemOnCursor(new ItemStack(e.getCurrentItem().getType(),
+                    e.getWhoClicked().setItemInHand(new ItemStack(e.getCurrentItem().getType(),
                             newAmountInHand, e.getCursor().getDurability()));
 
                     e.setCancelled(true);
