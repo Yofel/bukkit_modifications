@@ -14,13 +14,15 @@ public class InventoryClickListener implements Listener {
 
     Logger log = Bukkit.getLogger();
     
-    private int maxPotionStackSize = 8;
+    private int maxPotionStackSize = 64;
 
     @EventHandler
     public boolean onInventoryClick(InventoryClickEvent e) {
 
         if (e.getCurrentItem() == null || e.getCursor() == null) return false;
-        
+
+        if (!e.getWhoClicked().hasPermission("bukkit_modifications.potion_stacking")) return false;
+
         if (e.getCurrentItem().getType() == Material.POTION) {
                 //|| e.getCurrentItem().getType() == Material.MUSHROOM_SOUP) {
             if (!e.isShiftClick()) {
