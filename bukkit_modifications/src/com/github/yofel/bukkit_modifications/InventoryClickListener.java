@@ -64,7 +64,7 @@ public class InventoryClickListener implements Listener {
                     e.setCurrentItem(new ItemStack(
                             e.getCurrentItem().getType(), newAmountInInventory,
                             e.getCurrentItem().getDurability()));
-                    e.getWhoClicked().setItemInHand(new ItemStack(e.getCurrentItem().getType(),
+                    e.setCursor(new ItemStack(e.getCursor().getType(),
                             newAmountInHand, e.getCursor().getDurability()));
 
                     e.setCancelled(true);
