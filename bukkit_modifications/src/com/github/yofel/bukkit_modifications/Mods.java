@@ -5,6 +5,7 @@ import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
 import org.bukkit.inventory.FurnaceRecipe;
 import org.bukkit.inventory.ItemStack;
+import org.bukkit.inventory.ShapedRecipe;
 import org.bukkit.plugin.java.JavaPlugin;
 
 public class Mods extends JavaPlugin {
@@ -33,6 +34,13 @@ public class Mods extends JavaPlugin {
         getServer().addRecipe(new FurnaceRecipe(new ItemStack(Material.IRON_INGOT, 2), Material.IRON_CHESTPLATE));
         getServer().addRecipe(new FurnaceRecipe(new ItemStack(Material.IRON_INGOT, 2), Material.IRON_LEGGINGS));
         getServer().addRecipe(new FurnaceRecipe(new ItemStack(Material.IRON_INGOT, 1), Material.IRON_BOOTS));
+
+        // coal blocks to diamond
+        ShapedRecipe cb2d = new ShapedRecipe(new ItemStack(Material.DIAMOND, 1));
+        cb2d.shape("CCC", "CCC", "CCC");
+        cb2d.setIngredient('C', Material.COAL_BLOCK);
+
+        getServer().addRecipe(cb2d);
 
     }
 
