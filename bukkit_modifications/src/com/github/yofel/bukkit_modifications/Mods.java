@@ -25,14 +25,14 @@ public class Mods extends JavaPlugin {
         getServer().addRecipe(new FurnaceRecipe(new ItemStack(Material.SAND), Material.DIRT));
 
         // recycling
-        getServer().addRecipe(new FurnaceRecipe(new ItemStack(Material.GOLD_HELMET), Material.GOLD_INGOT));
-        getServer().addRecipe(new FurnaceRecipe(new ItemStack(Material.GOLD_CHESTPLATE), Material.GOLD_INGOT));
-        getServer().addRecipe(new FurnaceRecipe(new ItemStack(Material.GOLD_LEGGINGS), Material.GOLD_INGOT));
-        getServer().addRecipe(new FurnaceRecipe(new ItemStack(Material.GOLD_BOOTS), Material.GOLD_INGOT));
-        getServer().addRecipe(new FurnaceRecipe(new ItemStack(Material.IRON_HELMET), Material.IRON_INGOT));
-        getServer().addRecipe(new FurnaceRecipe(new ItemStack(Material.IRON_CHESTPLATE), Material.IRON_INGOT));
-        getServer().addRecipe(new FurnaceRecipe(new ItemStack(Material.IRON_LEGGINGS), Material.IRON_INGOT));
-        getServer().addRecipe(new FurnaceRecipe(new ItemStack(Material.IRON_BOOTS), Material.IRON_INGOT));
+        getServer().addRecipe(new FurnaceRecipe(new ItemStack(Material.GOLD_INGOT, 1), Material.GOLD_HELMET));
+        getServer().addRecipe(new FurnaceRecipe(new ItemStack(Material.GOLD_INGOT, 2), Material.GOLD_CHESTPLATE));
+        getServer().addRecipe(new FurnaceRecipe(new ItemStack(Material.GOLD_INGOT, 2), Material.GOLD_LEGGINGS));
+        getServer().addRecipe(new FurnaceRecipe(new ItemStack(Material.GOLD_INGOT, 1), Material.GOLD_BOOTS));
+        getServer().addRecipe(new FurnaceRecipe(new ItemStack(Material.IRON_INGOT, 1), Material.IRON_HELMET));
+        getServer().addRecipe(new FurnaceRecipe(new ItemStack(Material.IRON_INGOT, 2), Material.IRON_CHESTPLATE));
+        getServer().addRecipe(new FurnaceRecipe(new ItemStack(Material.IRON_INGOT, 2), Material.IRON_LEGGINGS));
+        getServer().addRecipe(new FurnaceRecipe(new ItemStack(Material.IRON_INGOT, 1), Material.IRON_BOOTS));
 
     }
 
